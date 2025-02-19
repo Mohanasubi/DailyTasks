@@ -18,8 +18,14 @@ test('AmazonCart',async({page})=>{
   console.log(options1.length);    //Approach2
   await expect(options1.length).toBe(46);
 
+
+
+  
    const content=await page.locator("#searchDropdownBox").textContent()
    await expect(content.includes('Beauty')).toBeTruthy();
+
+
+
 
    const optionss=await page.$$('#searchDropdownBox')
    let status=false;
@@ -37,4 +43,4 @@ test('AmazonCart',async({page})=>{
    
     expect(status).toBeTruthy();
    }
-})       
+})        
